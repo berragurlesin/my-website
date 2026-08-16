@@ -1,124 +1,296 @@
 :root {
-    --bg-color: #fdf2f4;
-    --card-bg: #ffffff;
-    --primary-pink: #ff758c;
-    --accent-red: #d90429;
-    --text-dark: #2b2d42;
-    --text-muted: #727d91;
-    --shadow: 0 10px 25px rgba(217, 4, 41, 0.08);
+    --bg: #f9f8f6;
+    --text: #1a1a1a;
+    --muted: #666666;
+    --cherry: #5D0124;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #fdf2f4 0%, #fce4ec 100%);
-    color: var(--text-dark);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-.container {
-    width: 100%;
-    max-width: 620px;
-}
-
-/* Profil Alanı */
-.profile-card {
-    background: var(--card-bg);
-    padding: 35px 25px;
-    border-radius: 24px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(255, 117, 140, 0.2);
-    margin-bottom: 20px;
-}
-
-.avatar {
-    font-size: 48px;
-    margin-bottom: 12px;
-}
-
-.profile-card h1 {
-    font-size: 1.8rem;
-    color: var(--accent-red);
-    margin-bottom: 8px;
-}
-
-.bio {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-}
-
-/* Butonlar */
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: white;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.social-btn:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-.pinterest { background-color: #e60023; }
-.spotify { background-color: #1ed760; }
-.youtube { background-color: #ff0000; }
-.github { background-color: #2b2d42; }
-
-/* Kartlar */
-.content-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.card {
-    background: var(--card-bg);
-    padding: 22px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(255, 117, 140, 0.15);
-}
-
-.card h2 {
-    font-size: 1.1rem;
-    color: var(--accent-red);
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-size: 0.92rem;
-    color: var(--text-dark);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    padding: 30px 5%;
     line-height: 1.6;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 0;
+}
+
+.star-icon {
+    font-size: 1.5rem;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover, .nav a.active {
+    color: var(--cherry);
+    text-decoration: underline;
+}
+
+
+.hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 8.5rem);
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.85;
+    letter-spacing: -2px;
+    color: var(--cherry);
+    margin: 20px 0 5px 0;
+}
+
+
+.scrapbook-canvas {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    max-width: 1400px;
+    height: 820px;
+    margin-bottom: 50px;
+}
+
+.asset {
+    position: absolute;
+    transition: transform 0.25s ease, z-index 0.25s;
+}
+
+.asset img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.photo-card img, .sticker-card img {
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.photo-2 { width: 253px; top: 125px; left: 8%; transform: rotate(-3deg); }
+.photo-1 { width: 239px; top: 165px; left: 29%; transform: rotate(4deg); }
+.photo-4 { width: 270px; top: 500px; left: 9%; transform: rotate(4deg); }
+.photo-5 { width: 195px; top: 500px; left: 30%; transform: rotate(-8deg); }
+
+
+.sticker-snoopy { width: 113px; top: 102px; left: 17%; transform: rotate(8deg); }
+.sticker-galaxy { width: 137px; top: 335px; left: 22%; transform: rotate(-3deg); }
+
+.handwritten-note {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: -22px;
+    left: -20px;
+    white-space: nowrap;
+    transform: rotate(-4deg);
+}
+
+.png-ribbon { width: 80px; top: 426px; left: 20%; transform: rotate(-8deg); z-index: 12; }
+.png-saturn { width: 110px; top: 445px; left: 39%; transform: rotate(15deg); z-index: 12; }
+.png-whale { width: 150px; top: 95px; left: 26%; transform: rotate(-10deg); z-index: 12; }
+.png-stars { width: 93px; top: 113px; left: 10%; z-index: 12; }
+.png-eye { width: 97px; top: 145px; left: 42%; transform: rotate(-12deg); z-index: 12; }
+
+.png-flower-1 { width: 95px; top: 435px; left: 8%; transform: rotate(-10deg); z-index: 12; }
+.png-flower-2 { width: 80px; top: 220px; left: 26%; transform: rotate(15deg); z-index: 12; }
+.png-flower-3 { width: 62px; top: 535px; left: 27%; transform: rotate(6deg); z-index: 12; }
+.png-flower-4 { width: 68px; top: 365px; left: 36%; transform: rotate(20deg); z-index: 12; }
+.png-flower-5 { width: 85px; top: 565px; left: 23%; transform: rotate(-15deg); z-index: 12; }
+
+.asset:hover {
+    transform: scale(1.08) rotate(0deg);
+    z-index: 50;
+}
+
+.bio-inline {
+    position: absolute;
+    top: 150px;
+    left: 52%;
+    width: 44%;
+    max-width: 560px;
+}
+
+.bio-inline p {
+    font-size: 1.02rem;
+    color: #2b2b2b;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.bio-inline p:first-child {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cherry);
+    margin-bottom: 22px;
+}
+
+.bio-inline p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-single-block, .wide-card {
+    max-width: 950px;
+    margin: 0 auto 40px auto;
+    background: #ffffff;
+    padding: 35px 45px;
+    border-radius: 12px;
+    border: 1px solid #e8e5dc;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.bio-single-block p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #2b2b2b;
+    line-height: 1.8;
+}
+
+.bio-single-block p:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    color: var(--cherry);
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.milestones-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.milestones-list li {
+    font-size: 0.98rem;
+    color: #333333;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0eee8;
+}
+
+
+.social-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    padding: 20px 28px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.2s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.social-card:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    filter: brightness(1.05);
+}
+
+.social-icon {
+    font-size: 2.2rem;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.social-info {
+    flex-grow: 1;
+}
+
+.social-info h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.social-info p {
+    font-size: 0.92rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: transform 0.2s;
+}
+
+.social-card:hover .arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+
+.social-card.github { background: linear-gradient(135deg, #24292e, #181717); }
+.social-card.youtube { background: linear-gradient(135deg, #ff0000, #c40000); }
+.social-card.kure { background: linear-gradient(135deg, #5D0124, #3d0017); }
+.social-card.pinterest { background: linear-gradient(135deg, #e60023, #ad001a); }
 footer {
     text-align: center;
-    margin-top: 30px;
-    color: var(--primary-pink);
-    font-weight: 600;
+    padding: 30px 0;
+    color: var(--muted);
     font-size: 0.85rem;
+    border-top: 1px solid #e0ddd5;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .scrapbook-canvas {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .asset { position: static !important; transform: none !important; }
 }
