@@ -284,7 +284,6 @@ footer {
     margin-top: 50px;
 }
 
-/* MASAÜSTÜNDE (769px ve üzeri) YEDEK METİN KUTUSUNU GİZLE */
 @media screen and (min-width: 769px) {
     .bio-single-block {
         display: none !important;
@@ -358,20 +357,18 @@ footer {
         clear: both !important;
     }
 }
-/* MASAÜSTÜ İÇİN YAZI VE FOOTER ARASINI SIKIŞTIRMA */
+
 @media screen and (min-width: 769px) {
-    /* 1. Mobil metni masaüstünde tamamen kapatır */
+   
     .bio-single-block {
         display: none !important;
     }
 
-    /* 2. Tuval yüksekliğini 820px'ten 620px'e düşürür, boşluğu yok eder */
     .scrapbook-canvas {
         height: 425px !important;
         margin-bottom: 10px !important;
     }
 
-    /* 3. Footer'ı tam görsellerin bittiği yere bağlar */
     footer {
         margin-top: 10px !important;
     }
