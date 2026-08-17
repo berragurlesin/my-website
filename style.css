@@ -332,3 +332,48 @@ footer {
         margin-top: 8px;
     }
 }
+/* TELEFON DÜZELTMESİ (768px ve altı) */
+@media screen and (max-width: 768px) {
+
+    /* 1. Kapsayıcı kutunun yüksekliğini serbest bırakıp dikey akışa geçiriyoruz */
+    .scrapbook-canvas {
+        height: auto !important;
+        min-height: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* 2. Resimlerin mutlak konumlarını iptal edip normal akışa sokuyoruz */
+    .scrapbook-canvas .asset {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 85% !important;
+        max-width: 280px !important;
+    }
+
+    /* 3. Telefonda üst üste binip ekranı karıştıran küçük PNG süsleri ve çiçekleri gizliyoruz */
+    .scrapbook-canvas .png-stars,
+    .scrapbook-canvas .png-whale,
+    .scrapbook-canvas .png-saturn,
+    .scrapbook-canvas .png-ribbon,
+    .scrapbook-canvas .png-eye,
+    .scrapbook-canvas .png-item,
+    .scrapbook-canvas [class*="png-flower"] {
+        display: none !important;
+    }
+
+    /* 4. Biyografi kutusunu kesin olarak en alta itiyoruz */
+    .bio-single-block {
+        position: relative !important;
+        clear: both !important;
+        margin-top: 30px !important;
+        width: 100% !important;
+    }
+}
