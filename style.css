@@ -294,3 +294,41 @@ footer {
     }
     .asset { position: static !important; transform: none !important; }
 }
+@media (max-width: 768px) {
+ 
+    .scrapbook-canvas {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    
+    .scrapbook-canvas .asset {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 85% !important;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+
+    .scrapbook-canvas .png-item, 
+    .scrapbook-canvas .sticker-card {
+        display: none; 
+    }
+
+    .handwritten-note {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
