@@ -286,15 +286,34 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    /* 1. Görselleri telefonda tamamen gizliyoruz */
     .scrapbook-canvas {
         display: none !important;
     }
 
-    .bio-single-block {
-        display: block !important;
+    /* 2. Ana taşıyıcıyı dikey esnek akışa alıyoruz */
+    body, main, .container {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 15px 0 !important;
+        padding: 0 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Biyografi kutusunu normal akışa oturtuyoruz (Sıra: 1) */
+    .bio-single-block {
+        display: block !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        float: none !important;
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0 !important;
         padding: 15px !important;
         box-sizing: border-box !important;
     }
@@ -312,19 +331,25 @@ footer {
         margin-bottom: 12px !important;
     }
 
-    /* Copyright Düzeltmesi */
+    /* 4. FOOTER / COPYRIGHT KESİN ÇÖZÜM (Sıra: 2) */
     footer, 
     .footer, 
     .copyright, 
-    p[class*="copyright"], 
-    div[class*="copyright"] {
-        position: static !important;
+    [class*="copyright"], 
+    [id*="copyright"] {
         display: block !important;
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        order: 2 !important;
+        margin-top: auto !important; /* Metin bittikten sonra sayfanın en altına iter */
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
         width: 100% !important;
-        margin-top: 40px !important;
-        margin-bottom: 20px !important;
         text-align: center !important;
         clear: both !important;
-        order: 999 !important;
     }
 }
