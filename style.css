@@ -284,92 +284,36 @@ footer {
     margin-top: 50px;
 }
 
-/* GÜNCEL MOBİL DÜZELTME (768px ve altı) */
+/* MOBİLDE TÜM GÖRSELLERİ GİZLE - SADECE METNİ GÖSTER (768px ve altı) */
 @media screen and (max-width: 768px) {
 
-    /* 1. Sayfa Kapsayıcısı */
-    .container, main, section {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 15px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        box-sizing: border-box !important;
+    /* 1. Görsel alanını tamamen yok ediyoruz */
+    .scrapbook-canvas {
+        display: none !important;
     }
 
-    /* 2. Başlık */
-    .hero-title-container {
-        order: 1 !important;
-        margin-bottom: 15px !important;
-    }
-
+    /* 2. Başlık boyutunu telefona göre ayarlıyoruz */
     .hero-title {
         font-size: 2.5rem !important;
         line-height: 1.1 !important;
+        margin-bottom: 20px !important;
     }
 
-    /* 3. Biyografi Kutusu (İnce kalmayı ve yazının üst üste binmesini çözer) */
+    /* 3. Biyografi metnini tam ekran yapıp okumayı rahatlatıyoruz */
     .bio-single-block {
-        order: 2 !important;
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
-        height: auto !important;
         position: static !important;
-        margin: 0 0 25px 0 !important;
+        margin: 0 auto !important;
         padding: 20px 15px !important;
-        line-height: 1.6 !important; /* Satırların çakışmasını engeller */
+        box-sizing: border-box !important;
     }
 
     .bio-single-block p {
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
         line-height: 1.6 !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 15px !important;
         white-space: normal !important;
-    }
-
-    /* 4. Görseller ve Kolaj Alanı */
-    .scrapbook-canvas {
-        order: 3 !important;
-        height: auto !important;
-        min-height: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 15px !important;
-        width: 100% !important;
-    }
-
-    /* Fotoğraflar */
-    .scrapbook-canvas .asset {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        width: 80% !important;
-        max-width: 240px !important;
-    }
-
-    /* 5. Küçük Görseller ve Sticker'lar (Geri Getirildi) */
-    .scrapbook-canvas .png-stars,
-    .scrapbook-canvas .png-whale,
-    .scrapbook-canvas .png-saturn,
-    .scrapbook-canvas .png-ribbon,
-    .scrapbook-canvas .png-eye,
-    .scrapbook-canvas .png-item,
-    .scrapbook-canvas [class*="png-flower"],
-    .scrapbook-canvas .sticker-card {
-        display: block !important;
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        width: 50px !important; /* Küçük boyut */
-        height: auto !important;
-        margin: 5px auto !important;
+        word-wrap: break-word !important;
     }
 }
