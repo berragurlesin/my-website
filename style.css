@@ -284,13 +284,17 @@ footer {
     margin-top: 50px;
 }
 
+/* ==========================================
+   MOBİL ÖZEL DÜZEN (768px ve altı)
+   ========================================== */
 @media screen and (max-width: 768px) {
 
-  
+    /* 1. Görsel kolaj alanını telefonda gizle */
     .scrapbook-canvas {
         display: none !important;
     }
 
+    /* 2. Ana taşıyıcıları ekrana yay */
     body, main, .container {
         width: 100% !important;
         max-width: 100% !important;
@@ -300,6 +304,7 @@ footer {
         box-sizing: border-box !important;
     }
 
+    /* 3. Biyografi metnini tam genişlikte görünür yap */
     .bio-single-block {
         display: block !important;
         visibility: visible !important;
@@ -311,6 +316,7 @@ footer {
         box-sizing: border-box !important;
     }
 
+    /* Başlık stili */
     .bio-single-block h2,
     .bio-single-block h1 {
         font-size: 1.3rem !important;
@@ -319,6 +325,7 @@ footer {
         line-height: 1.4 !important;
     }
 
+    /* Paragraf ve metin stili */
     .bio-single-block p {
         font-size: 0.95rem !important;
         line-height: 1.65 !important;
@@ -328,6 +335,7 @@ footer {
         word-wrap: break-word !important;
     }
 
+    /* 4. Copyright / Footer elemanlarını mobilde tamamen gizle */
     footer, 
     .footer, 
     .copyright, 
