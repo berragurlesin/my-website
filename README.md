@@ -39,3 +39,5 @@ Preview:
 
 Design Note:
 Each image in the collage section is positioned using `position: absolute` at the top, left, and right coordinates within the `.scrapbook-canvas` element—just like pasting a photo into a physical scrapbook. The z-index controls the layering order of the images, while the `:hover` selector makes them enlarge and come to the foreground when the cursor hovers over them.
+
+Link: https://berragurlesin.github.io/my-website/
