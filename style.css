@@ -284,10 +284,9 @@ footer {
     margin-top: 50px;
 }
 
-
 @media screen and (max-width: 768px) {
 
-   
+  
     .scrapbook-canvas {
         display: none !important;
     }
@@ -301,7 +300,6 @@ footer {
         box-sizing: border-box !important;
     }
 
-   
     .bio-single-block {
         display: block !important;
         visibility: visible !important;
@@ -313,7 +311,6 @@ footer {
         box-sizing: border-box !important;
     }
 
-    
     .bio-single-block h2,
     .bio-single-block h1 {
         font-size: 1.3rem !important;
@@ -331,7 +328,6 @@ footer {
         word-wrap: break-word !important;
     }
 
-   
     footer, 
     .footer, 
     .copyright, 
