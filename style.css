@@ -284,67 +284,63 @@ footer {
     margin-top: 50px;
 }
 
+/* ==========================================
+   MOBİL ÖZEL DÜZEN (768px ve altı)
+   ========================================== */
 @media screen and (max-width: 768px) {
 
-    /* 1. Görsel alanını kapatıyoruz */
+    /* 1. Görsel kolaj alanını telefonda gizle */
     .scrapbook-canvas {
         display: none !important;
     }
 
-    /* 2. Ana taşıyıcıyı dikey esnek akışa alıyoruz */
+    /* 2. Ana taşıyıcıları ekrana yay */
     body, main, .container {
-        display: flex !important;
-        flex-direction: column !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 15px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
         margin: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* 3. BİYOGRAFİ METNİ - Üstte duracak (Sıra: 1) */
+    /* 3. Biyografi metnini tam genişlikte görünür yap */
     .bio-single-block {
         display: block !important;
+        visibility: visible !important;
         position: static !important;
-        order: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
         margin: 20px 0 !important;
-        padding: 15px !important;
+        padding: 15px 0 !important;
         box-sizing: border-box !important;
     }
 
-    .bio-single-block h2 {
+    /* Başlık stili */
+    .bio-single-block h2,
+    .bio-single-block h1 {
         font-size: 1.3rem !important;
         color: #5D0124 !important;
         margin-bottom: 12px !important;
+        line-height: 1.4 !important;
     }
 
+    /* Paragraf ve metin stili */
     .bio-single-block p {
         font-size: 0.95rem !important;
-        line-height: 1.6 !important;
+        line-height: 1.65 !important;
         color: #1a1a1a !important;
         margin-bottom: 12px !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
     }
 
-    /* 4. COPYRIGHT / FOOTER - En altta duracak (Sıra: 99) */
+    /* 4. Copyright / Footer elemanlarını mobilde tamamen gizle */
     footer, 
     .footer, 
     .copyright, 
     [class*="copyright"], 
     [id*="copyright"] {
-        display: block !important;
-        position: static !important; /* Mutlak konumlandırmayı kaldırır */
-        top: auto !important;
-        bottom: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        order: 99 !important; /* Kesin olarak en sona atar */
-        margin-top: 40px !important;
-        margin-bottom: 20px !important;
-        width: 100% !important;
-        text-align: center !important;
-        clear: both !important;
+        display: none !important;
     }
 }
